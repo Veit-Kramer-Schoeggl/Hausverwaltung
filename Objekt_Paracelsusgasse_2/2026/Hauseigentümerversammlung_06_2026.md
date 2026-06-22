@@ -1,7 +1,7 @@
 # Protokoll der ordentlichen Hauseigentümerversammlung
 
 > **Liegenschaft:** Paracelsusgasse 2, 8010 Graz\
-> **Datum:** _[Datum eintragen]_  ·  **Beginn / Ende:** _[Uhrzeit]_\
+> **Datum:** 17.06.2026  ·  **Beginn / Ende:** _[Uhrzeit]_\
 > **Protokollführung:** _[Name eintragen]_\
 > **Hausverwaltung:** Seria (Fr. Neumann)
 
@@ -25,6 +25,8 @@
 | 12 | Fr. Jafferji Marita | | 9,59 % | |
 | | **Gesamt anwesend (Quorum)** | | | **___ %** |
 
+Zudem anwesend: **Frau Fabian** sowie **Frau Neumann** von der Hausverwaltung Seria.
+
 ---
 
 ## Tagesordnung
@@ -40,6 +42,7 @@
 - **Rückzahlung bis Juni/Juli.** Die Seria fragt nochmals nach dem rechtsgültigen Konto jedes Eigentümers / jeder Eigentümerin, damit auf dieses überwiesen werden kann.
 - **10.000 € Elektroinstallationen** — wird von der Seria nachrecherchiert.
 - **Anwaltliches Erstschreiben:** Die Anwesenden stimmen zu, dass die Kosten für ein erstes anwaltliches Schreiben übernommen werden. Je nach Antwort des Versicherers wird das weitere Vorgehen bei der nächsten Hauseigentümerversammlung besprochen.
+- **Eigenveranlasste Reparaturen:** Rechnungen, die durch von der Hausgemeinschaft selbst veranlasste Reparaturen oder Aufwertungen der PG2 anfallen, werden an die HV gesendet — mit dem Auftrag, diese aus den Rücklagen zu begleichen.
 
 ### 3 · Allgemeinbereich & Fassade (Firma Liebman)
 
@@ -55,19 +58,32 @@
 - **Sperrmüllcontainer:** Die Seria fragt Herrn Lanzer und meldet sich danach wieder bei uns.
 - Die **alten Fahrräder aus dem Keller** könnten mitentrümpelt werden.
 - **Anhänger-Transport:** Herr Adamek bietet an, einen Teil des Sperrmülls mit seinem Anhänger zum Sturzplatz zu führen — **ab Juli, bevorzugt freitags ab 14:00 Uhr.**
+- **Gemeinsamer Container für den Keller-Sperrmüll:** Für den sich im Keller sammelnden Sperrmüll soll ein gemeinsamer Container gemietet werden (Kostenpunkt rund **500 €**; z. B. Servus Abfall: 1 Mulde 8 m³ 109 € + Sperrmüll 255 €/Tonne, bei Holding Graz 335,5 €/Tonne). Geplanter Ablauf:
+  1. Abstimmung über das Wochenende, an dem der Container bestellt wird (3–7 Tage Vorlaufzeit; bei Nichtverfügbarkeit der nächstgereihte Termin).
+  2. Information an alle Wohnungseigentümer:innen.
+  3. Container wird am Freitag geliefert und am Montag wieder abgeholt.
+  - *Ziel des Vorgehens: verhindern, dass Dritte den Container mit Sperrmüll befüllen.*
 
-### 5 · Fahrräder & Scooter
+### 5 · Fahrräder, Scooter & Fahrradständer
 
 - Fahrräder und Scooter wurden allgemein angesprochen.
 - Es soll ein **Aushang** erstellt werden, dass Fahrräder vom Gehweg entfernt werden sollen.
 - Zusätzlich könnte ein **Schild** aufgehängt werden, das diesen Bereich als nicht zum Abstellen von Fahrrädern vorgesehen ausweist.
+- **Fahrradständer:** Anschaffung eines Fahrradständers für den mit Waschbetonplatten versehenen Bereich unter dem Vordach der PG2 im Osten (Kostenpunkt ca. **200 €**). Darüber wird noch abgestimmt; bei Bedarf Selbstinstallation durch die Haussprecherinnen.
 
 ### 6 · Grünflächen & Außenbereiche
 
 - **Schallschutzwand Richtung Riestraße** wurde angesprochen. Die Kontakte werden von Johanna Kramer-Schöggl an die Seria (Fr. Neumann) weitergeleitet.
-- Der **Fichtenschnitt** wird im Herbst durchgeführt.
+- **Fichtenschnitt:** Herr Dr. Birk gab bekannt, dass sein Bekannter derzeit keine Kapazitäten für einen Baumschnitt hat. Herr Adamek fragt noch einen Bekannten. Führt auch das zu keinem Ergebnis, kommt der **Maschinenring** in Frage, der von der Hausgemeinschaft beauftragt werden könnte. (Durchführung im Herbst.)
+- **Gartenweg & Optik WHG 1:** Der Mieter (Hr. Ronald Mahler) soll darauf aufmerksam gemacht werden, dass der von ihm angelegte Gartenwegteil (Abstieg in den Privatgarten der WHG 1, mittig am nördlichen Zugangsweg zum Gemeinschaftsgarten) instabil ist und entweder sauber verlegt oder entfernt werden muss, da er ansonsten für etwaige Unfälle haftbar ist. Weiters wird er gebeten, für etwas mehr Ordnung in seiner Gartenparzelle und am nördl. Balkon zu sorgen.
 
-### 7 · Gesundheit & Sicherheit
+### 7 · Haustechnik & Allgemeinbereiche
+
+- **Heizungen WHG 11:** Einige Heizkörper funktionieren trotz Entlüften nicht — möglicherweise sind die Ventile verklemmt.
+- **Boiler-Umstellung auf Tagstrom:** Die Nutzung von Nachtstrom ist für Boiler nicht mehr kostendeckend (die Gebühren für einen Zählerpunkt beim Netzversorger übersteigen die Einsparung). Allen interessierten Eigentümer:innen wird daher eine Umklemmung des Boilers von Nacht- auf Tagstrom angeboten (Kostenpunkt aktuell ca. **180 €**, Elektro Schröttner). Dazu wird es eine **Onlineabstimmung** geben.
+- **Versorgungsschächte Stiegenhaus/Gänge:** Nach dem Einzug der Glasfaserkabel wurden die Schachtabdeckungen nicht mehr geschlossen, einige Schrauben fehlen. Diese werden durch **Veit Kramer-Schöggl** verschlossen.
+
+### 8 · Gesundheit & Sicherheit
 
 - Der **Swimmingpool von Wohnung 1** stellt eine Gelsenbrutstätte dar. Die Seria meldet sich bei Wohnung 1 und hält die Mieter an, das Pool zu entfernen.
 
@@ -76,20 +92,26 @@
 ## Maßnahmen & Zuständigkeiten
 
 | Maßnahme | Zuständig | Bis wann |
-| :-- | :-- | :-- |
+|:-----------------------------------------------------------|:----------------------|:------------------|
 | Vorauszahlungen berechnen & zurückzahlen | Hauseigentümergemeinschaft → Seria | Juni / Juli |
 | Rechtsgültiges Konto je Eigentümer:in erfragen | Seria | — |
 | 10.000 € Elektroinstallationen prüfen | Seria | — |
+| Anwaltliches Erstschreiben beauftragen | beschlossen (Kosten übernommen) | nach Versicherer-Antwort |
 | Foto der offenen Dichtung übermitteln | Hr. Adamek → Seria | — |
 | Nachfrage bei Firma Liebman (Allgemeinbereich, Dichtung, Fassade) | Seria | — |
 | Kabelinstallation WHG Tanil prüfen | Hr. Goller (beauftragt: Seria) | — |
 | Sperrmüllcontainer mit Hr. Lanzer klären | Seria | — |
 | Sperrmüll-Teiltransport mit Anhänger | Hr. Adamek | ab Juli, Fr. ab 14:00 |
-| Kontakte Schallschutzwand weiterleiten | J. Kramer-Schöggl → Seria | — |
-| Mieter WHG 1 zur Pool-Entfernung anhalten | Seria | — |
+| Gemeinsamer Keller-Sperrmüllcontainer (Abstimmung Wochenende) | Hausgemeinschaft | offen |
 | Aushang & Schild „keine Fahrräder am Gehweg" | offen | — |
-| Fichtenschnitt durchführen | — | Herbst |
-| Anwaltliches Erstschreiben beauftragen | beschlossen (Kosten übernommen) | nach Versicherer-Antwort |
+| Fahrradständer anschaffen (Abstimmung) | Hausgemeinschaft | offen |
+| Kontakte Schallschutzwand weiterleiten | J. Kramer-Schöggl → Seria | — |
+| Fichtenschnitt organisieren (sonst Maschinenring) | Hr. Adamek | Herbst |
+| Mieter WHG 1 (R. Mahler) zu Gartenweg & Ordnung ansprechen | offen | — |
+| Heizungen WHG 11 prüfen (Ventile) | offen | — |
+| Boiler-Umstellung Tagstrom (Onlineabstimmung) | Hausgemeinschaft / Elektro Schröttner | offen |
+| Versorgungsschächte schließen | Veit Kramer-Schöggl | — |
+| Mieter WHG 1 zur Pool-Entfernung anhalten | Seria | — |
 
 ---
 

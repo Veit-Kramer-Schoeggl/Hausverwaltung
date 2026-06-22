@@ -39,10 +39,17 @@ versionierbar, sieht aber gedruckt professionell aus.
 Ergebnisse landen unter `Export/<gleicher Pfad>/`. `Export/` wird bewusst **nicht**
 versioniert — die Dateien lassen sich jederzeit neu bauen.
 
+## Namensschema
+
+Dateien werden nach `<Typ>_<MM>_<JJJJ>` benannt, z. B.
+`Hauseigentümerversammlung_06_2026.md`, `Tagesordnung_03_2026.odt`,
+`Anwesenheitsliste_06_2026.xlsx`. Gleiche Sitzung = gleicher Dateiname,
+nur andere Endung (`.md` = finale Fassung, `.odt`/`.pdf` = Originale/Export).
+
 ## Neues Protokoll anlegen
 
 1. `Vorlagen/Protokoll_Vorlage.md` in den Jahresordner kopieren, z. B.
-   `Objekt_Paracelsusgasse_2/2026/Hauseigentuemerversammlung_2026-06.md`
+   `Objekt_Paracelsusgasse_2/2026/Hauseigentümerversammlung_06_2026.md`
 2. Platzhalter in `[eckigen Klammern]` ausfüllen.
 3. `./build.sh <datei.md>` → fertiges PDF/DOCX im `Export/`.
 
