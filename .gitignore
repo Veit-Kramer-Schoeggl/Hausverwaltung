@@ -1,0 +1,11 @@
+# Generierte Ausgaben (jederzeit aus den .md neu baubar mit ./build.sh)
+/Export/
+
+# LibreOffice / Office Sperr- und Temp-Dateien
+.~lock.*#
+~$*
+*.tmp
+
+# Betriebssystem
+.DS_Store
+Thumbs.db

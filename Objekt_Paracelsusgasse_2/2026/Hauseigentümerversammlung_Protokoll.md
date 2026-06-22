@@ -1,0 +1,96 @@
+# Protokoll der ordentlichen Hauseigentümerversammlung
+
+> **Liegenschaft:** Paracelsusgasse 2, 8010 Graz\
+> **Datum:** _[Datum eintragen]_  ·  **Beginn / Ende:** _[Uhrzeit]_\
+> **Protokollführung:** _[Name eintragen]_\
+> **Hausverwaltung:** Seria (Fr. Neumann)
+
+---
+
+## Anwesenheit & Quorum
+
+| Tür | Name | Anw | Anteil | Gew. % |
+|:---:|:------------------------------------------|:----:|-------:|-------:|
+| 1 | Dr. Dehchamani Dadbeh | | 9,82 % | |
+| 2 | Fr. Klaftenegger Katharina | | 8,01 % | |
+| 3 | Dr. Klaftenegger Ilona | | 8,01 % | |
+| 4 | Fr. Girtler Eveline | | 9,82 % | |
+| 5 | Fr. Tanil Johanna | | 8,92 % | |
+| 6 | Fr. Kramer-Schöggl Johanna, BA | | 7,22 % | |
+| 7 | Dr. Birk Steffen | | 6,66 % | |
+| 8 | Hr. Adamek Stephan | | 8,92 % | |
+| 9 | Fr. Clara Roller | | 9,03 % | |
+| 10 | Dr. Neumeister Peter | | 7,00 % | |
+| 11 | Fr. Mag. (FH) Brunnader Anita | | 7,00 % | |
+| 12 | Fr. Jafferji Marita | | 9,59 % | |
+| | **Gesamt anwesend (Quorum)** | | | **___ %** |
+
+---
+
+## Tagesordnung
+
+### 1 · Begrüßung
+
+- Begrüßung und Vorstellung von **Frau Neumann** (Seria).
+
+### 2 · Finanzen & Rücklagen
+
+- Rücklagen und Vorauszahlungen sind laut Frau Neumann bereits im **Gesamtbetrag** enthalten.
+- Die Unterschiede bei den Vorauszahlungen werden von der **Hauseigentümergemeinschaft** berechnet, an Frau Neumann weitergeleitet, dort überprüft und entsprechend zurückgezahlt.
+- **Rückzahlung bis Juni/Juli.** Die Seria fragt nochmals nach dem rechtsgültigen Konto jedes Eigentümers / jeder Eigentümerin, damit auf dieses überwiesen werden kann.
+- **10.000 € Elektroinstallationen** — wird von der Seria nachrecherchiert.
+- **Anwaltliches Erstschreiben:** Die Anwesenden stimmen zu, dass die Kosten für ein erstes anwaltliches Schreiben übernommen werden. Je nach Antwort des Versicherers wird das weitere Vorgehen bei der nächsten Hauseigentümerversammlung besprochen.
+
+### 3 · Allgemeinbereich & Fassade (Firma Liebman)
+
+- Frage, warum der **Allgemeinbereich** noch nicht fertig ist → laut Frau Neumann vermutlich ein **interner Fehler bei der Firma Liebman**.
+- **Offene Dichtung:** Herr Adamek übermittelt ein Foto an die Seria. Die Seria fragt daraufhin bei Firma Liebman nach:
+  1. Warum der Allgemeinbereich so hoch ist.
+  2. Ob die Dichtung noch abgedeckt wird.
+  3. Ob die ausgebrochenen Fassadenteile noch ausgebessert und ggf. mit Farbe nachgebessert werden.
+- **Kabelinstallation WHG Tanil:** Herr Goller sieht sich die Kabelinstallation zur Wohnung von Frau Tanil an — beauftragt durch die Seria.
+
+### 4 · Sperrmüll & Entrümpelung
+
+- **Sperrmüllcontainer:** Die Seria fragt Herrn Lanzer und meldet sich danach wieder bei uns.
+- Die **alten Fahrräder aus dem Keller** könnten mitentrümpelt werden.
+- **Anhänger-Transport:** Herr Adamek bietet an, einen Teil des Sperrmülls mit seinem Anhänger zum Sturzplatz zu führen — **ab Juli, bevorzugt freitags ab 14:00 Uhr.**
+
+### 5 · Fahrräder & Scooter
+
+- Fahrräder und Scooter wurden allgemein angesprochen.
+- Es soll ein **Aushang** erstellt werden, dass Fahrräder vom Gehweg entfernt werden sollen.
+- Zusätzlich könnte ein **Schild** aufgehängt werden, das diesen Bereich als nicht zum Abstellen von Fahrrädern vorgesehen ausweist.
+
+### 6 · Grünflächen & Außenbereiche
+
+- **Schallschutzwand Richtung Riestraße** wurde angesprochen. Die Kontakte werden von Johanna Kramer-Schöggl an die Seria (Fr. Neumann) weitergeleitet.
+- Der **Fichtenschnitt** wird im Herbst durchgeführt.
+
+### 7 · Gesundheit & Sicherheit
+
+- Der **Swimmingpool von Wohnung 1** stellt eine Gelsenbrutstätte dar. Die Seria meldet sich bei Wohnung 1 und hält die Mieter an, das Pool zu entfernen.
+
+---
+
+## Maßnahmen & Zuständigkeiten
+
+| Maßnahme | Zuständig | Bis wann |
+| :-- | :-- | :-- |
+| Vorauszahlungen berechnen & zurückzahlen | Hauseigentümergemeinschaft → Seria | Juni / Juli |
+| Rechtsgültiges Konto je Eigentümer:in erfragen | Seria | — |
+| 10.000 € Elektroinstallationen prüfen | Seria | — |
+| Foto der offenen Dichtung übermitteln | Hr. Adamek → Seria | — |
+| Nachfrage bei Firma Liebman (Allgemeinbereich, Dichtung, Fassade) | Seria | — |
+| Kabelinstallation WHG Tanil prüfen | Hr. Goller (beauftragt: Seria) | — |
+| Sperrmüllcontainer mit Hr. Lanzer klären | Seria | — |
+| Sperrmüll-Teiltransport mit Anhänger | Hr. Adamek | ab Juli, Fr. ab 14:00 |
+| Kontakte Schallschutzwand weiterleiten | J. Kramer-Schöggl → Seria | — |
+| Mieter WHG 1 zur Pool-Entfernung anhalten | Seria | — |
+| Aushang & Schild „keine Fahrräder am Gehweg" | offen | — |
+| Fichtenschnitt durchführen | — | Herbst |
+| Anwaltliches Erstschreiben beauftragen | beschlossen (Kosten übernommen) | nach Versicherer-Antwort |
+
+---
+
+_Nächste Besprechung offener Punkte bei der nächsten Hauseigentümerversammlung._
