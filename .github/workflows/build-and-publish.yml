@@ -1,0 +1,89 @@
+name: PDFs bauen & in die Cloud pushen
+
+# Baut bei jedem Push nur die GEÄNDERTEN Markdown-Dateien zu PDF/DOCX
+# und lädt das Ergebnis nach Infomaniak kDrive (WebDAV) hoch.
+# Unveränderte PDFs werden weder neu gebaut noch erneut hochgeladen.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '**/*.md'
+      - 'Vorlagen/reference.docx'
+      - 'build.sh'
+      - '.github/workflows/build-and-publish.yml'
+  workflow_dispatch:
+    inputs:
+      rebuild_all:
+        description: 'Alle PDFs neu bauen (statt nur geänderte)'
+        type: boolean
+        default: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    # Secrets als Job-Env, damit der Upload-Schritt sauber übersprungen werden
+    # kann, solange die kDrive-Zugangsdaten noch nicht hinterlegt sind.
+    env:
+      KDRIVE_WEBDAV_URL: ${{ secrets.KDRIVE_WEBDAV_URL }}
+      KDRIVE_USER:       ${{ secrets.KDRIVE_USER }}
+      KDRIVE_PASS:       ${{ secrets.KDRIVE_PASS }}
+      KDRIVE_DEST:       ${{ vars.KDRIVE_DEST }}   # optional, Standard unten
+    steps:
+      - name: Repository auschecken
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2   # vorheriger Commit für den Diff
+
+      - name: Werkzeuge installieren (pandoc, LibreOffice, Carlito, rclone)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            pandoc libreoffice-writer fonts-crosextra-carlito rclone
+
+      - name: Geänderte Markdown-Dateien bauen
+        run: |
+          set -euo pipefail
+          base='${{ github.event.before }}'
+          rebuild_all='${{ github.event.inputs.rebuild_all }}'
+
+          build_all() { echo "→ baue ALLE Dateien"; ./build.sh; }
+
+          if [ "$rebuild_all" = "true" ]; then
+            build_all
+          elif [ -z "$base" ] || [ "$base" = "0000000000000000000000000000000000000000" ]; then
+            # erster Push / kein Vergleichspunkt
+            build_all
+          elif git diff --name-only "$base" "${{ github.sha }}" \
+                 | grep -qE '^(build\.sh|Vorlagen/reference\.docx)$'; then
+            echo "→ Vorlage/Build geändert"; build_all
+          else
+            mapfile -t CHANGED < <(git diff --name-only "$base" "${{ github.sha }}" \
+              | grep -E '\.md$' | grep -vE '^(README|MEMORY)\.md$' | grep -v '^Vorlagen/' || true)
+            if [ "${#CHANGED[@]}" -eq 0 ]; then
+              echo "→ keine relevanten .md-Änderungen, nichts zu bauen"
+            else
+              printf '→ baue: %s\n' "${CHANGED[@]}"
+              ./build.sh "${CHANGED[@]}"
+            fi
+          fi
+
+      - name: Nach Infomaniak kDrive hochladen (rclone/WebDAV)
+        if: ${{ env.KDRIVE_WEBDAV_URL != '' }}
+        run: |
+          set -euo pipefail
+          [ -d Export ] || { echo "Kein Export/ – nichts hochzuladen."; exit 0; }
+          export RCLONE_CONFIG_KDRIVE_TYPE=webdav
+          export RCLONE_CONFIG_KDRIVE_URL="$KDRIVE_WEBDAV_URL"
+          export RCLONE_CONFIG_KDRIVE_VENDOR=other
+          export RCLONE_CONFIG_KDRIVE_USER="$KDRIVE_USER"
+          export RCLONE_CONFIG_KDRIVE_PASS="$(rclone obscure "$KDRIVE_PASS")"
+          DEST="${KDRIVE_DEST:-Hausverwaltung/Export}"
+          # 'copy' = nur neue/geänderte Dateien hochladen, nichts löschen
+          rclone copy Export "kdrive:$DEST" --create-empty-src-dirs --transfers 4 -v
+
+      - name: Hinweis, falls Zugangsdaten fehlen
+        if: ${{ env.KDRIVE_WEBDAV_URL == '' }}
+        run: |
+          echo "::notice::PDFs wurden gebaut, aber NICHT hochgeladen –"
+          echo "::notice::kDrive-Secrets (KDRIVE_WEBDAV_URL, KDRIVE_USER, KDRIVE_PASS) fehlen noch."

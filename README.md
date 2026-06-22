@@ -39,6 +39,12 @@ versionierbar, sieht aber gedruckt professionell aus.
 Ergebnisse landen unter `Export/<gleicher Pfad>/`. `Export/` wird bewusst **nicht**
 versioniert — die Dateien lassen sich jederzeit neu bauen.
 
+## Automatischer Build & Cloud
+
+Bei jedem `git push` baut **GitHub Actions** automatisch nur die *geänderten*
+`.md` zu PDF/DOCX und lädt sie nach **Infomaniak kDrive** (von dort Freigabe-Links
+für Eigentümer:innen). Einrichtung & Zugangsdaten: siehe **[CLOUD_SETUP.md](CLOUD_SETUP.md)**.
+
 ## Namensschema
 
 Dateien werden nach `<Typ>_<MM>_<JJJJ>` benannt, z. B.
