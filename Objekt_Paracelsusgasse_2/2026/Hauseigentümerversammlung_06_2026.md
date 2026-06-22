@@ -11,21 +11,23 @@
 
 | Tür | Name | Anw | Anteil | Gew. % |
 |:---:|:------------------------------------------|:----:|-------:|-------:|
-| 1 | Dr. Dehchamani Dadbeh | | 9,82 % | |
-| 2 | Fr. Klaftenegger Katharina | | 8,01 % | |
-| 3 | Dr. Klaftenegger Ilona | | 8,01 % | |
-| 4 | Fr. Girtler Eveline | | 9,82 % | |
-| 5 | Fr. Tanil Johanna | | 8,92 % | |
-| 6 | Fr. Kramer-Schöggl Johanna, BA | | 7,22 % | |
-| 7 | Dr. Birk Steffen | | 6,66 % | |
-| 8 | Hr. Adamek Stephan | | 8,92 % | |
-| 9 | Fr. Clara Roller | | 9,03 % | |
-| 10 | Dr. Neumeister Peter | | 7,00 % | |
-| 11 | Fr. Mag. (FH) Brunnader Anita | | 7,00 % | |
-| 12 | Fr. Jafferji Marita | | 9,59 % | |
-| | **Gesamt anwesend (Quorum)** | | | **___ %** |
+| 1 | Dr. Dehchamani Dadbeh | 0 | 9,82 % | – |
+| 2 | Fr. Klaftenegger Katharina | 0 | 8,01 % | – |
+| 3 | Dr. Klaftenegger Ilona | 1 | 8,01 % | 8,01 % |
+| 4 | Fr. Girtler Eveline | 1 | 9,82 % | 9,82 % |
+| 5 | Fr. Tanil Johanna | 0 | 8,92 % | – |
+| 6 | Fr. Kramer-Schöggl Johanna, BA | 1 | 7,22 % | 7,22 % |
+| 7 | Dr. Birk Steffen | 1 | 6,66 % | 6,66 % |
+| 8 | Hr. Adamek Stephan | 1 | 8,92 % | 8,92 % |
+| 9 | Fr. Clara Roller | 1 | 9,03 % | 9,03 % |
+| 10 | Dr. Neumeister Peter | 0 | 7,00 % | – |
+| 11 | Fr. Mag. (FH) Brunnader Anita | 1 | 7,00 % | 7,00 % |
+| 12 | Fr. Jafferji Marita | 0 | 9,59 % | – |
+| | **Gesamt anwesend (Quorum)** | **7** | | **56,66 %** |
 
 Zudem anwesend: **Frau Fabian** sowie **Frau Neumann** von der Hausverwaltung Seria.
+
+Damit sind **56,66 %** der Miteigentumsanteile vertreten — die Versammlung ist **beschlussfähig**.
 
 ---
 

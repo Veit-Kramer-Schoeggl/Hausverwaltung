@@ -10,7 +10,7 @@
 | 6       | Kramer-Schöggl Johanna, BA                |              | 7.22        |
 | 7       | Dr. Birk Steffen                          |              | 6.66        |
 | 8       | Adamek Stephan                            |              | 8.92        |
-| 9       | Univ. Prof. Dr. Roller-Wirnsberger Regina |              | 9.03        |
+| 9       | Fr. Clara Roller                          |              | 9.03        |
 | 10      | Dr. Neumeister Peter                      |              | 7.00        |
 | 11      | Mag. (FH) Brunnader Anita                 |              | 7.00        |
 | 12      | Jafferji Marita                           |              | 9.59        |
