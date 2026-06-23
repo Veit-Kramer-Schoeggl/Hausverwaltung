@@ -5,15 +5,15 @@
 # Verwendung:
 #   ./build.sh datei.md                      eine Datei -> DOCX + PDF
 #   ./build.sh ordner/                       alle .md in einem Ordner (rekursiv)
-#   ./build.sh                               ALLE .md im Projekt (außer Vorlagen/, Export/)
+#   ./build.sh                               ALLE .md der Objekte
 #   ./build.sh --docx datei.md               nur DOCX
 #   ./build.sh --pdf  datei.md               nur PDF
 #   ./build.sh --force ...                    auch unveränderte neu bauen
 #
-# Inkrementell: bereits aktuelle PDFs/DOCX werden übersprungen (es sei denn die
-# Quelle, Vorlagen/reference.docx oder build.sh sind neuer). Mit --force erzwingen.
-#
-# Die Ausgaben landen unter  Export/<gleicher Pfad>/  und werden nicht versioniert.
+# Ausgaben landen PRO OBJEKT unter  <Objekt>/Export/<restlicher Pfad>/
+# (z. B.  Objekt_Paracelsusgasse_2/Export/2026/…) und werden nicht versioniert.
+# Inkrementell: aktuelle PDFs/DOCX werden übersprungen (außer Quelle,
+# Vorlagen/reference.docx oder build.sh sind neuer). Mit --force erzwingen.
 # Design kommt aus  Vorlagen/reference.docx .
 #
 set -euo pipefail
@@ -21,7 +21,6 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REF="$ROOT/Vorlagen/reference.docx"
 SELF="$ROOT/build.sh"
-OUTROOT="$ROOT/Export"
 
 WANT_DOCX=1; WANT_PDF=1; FORCE=0
 ARGS=()
@@ -43,11 +42,12 @@ SOFFICE="$(command -v soffice || command -v libreoffice || true)"
 # Liste der zu bauenden .md-Dateien ermitteln
 collect() {
   if [[ ${#ARGS[@]} -eq 0 ]]; then
-    find "$ROOT" -name '*.md' -not -path "$ROOT/Vorlagen/*" -not -path "$ROOT/Export/*" \
-                 -not -path "$ROOT/.git/*" -not -iname 'README.md' -not -iname 'MEMORY.md'
+    find "$ROOT" -name '*.md' \
+                 -not -path '*/Export/*' -not -path "$ROOT/Vorlagen/*" -not -path "$ROOT/.git/*" \
+                 -not -iname 'README.md' -not -iname 'MEMORY.md' -not -iname 'CLOUD_SETUP.md'
   else
     for t in "${ARGS[@]}"; do
-      if   [[ -d "$t" ]]; then find "$t" -name '*.md'
+      if   [[ -d "$t" ]]; then find "$t" -name '*.md' -not -path '*/Export/*'
       elif [[ -f "$t" ]]; then echo "$t"
       else echo "WARN: nicht gefunden: $t" >&2
       fi
@@ -55,7 +55,17 @@ collect() {
   fi
 }
 
-# Muss die Datei (neu) gebaut werden?
+# Ausgabeordner pro Objekt:  <Objekt>/Export/<unterordner>
+out_dir_for() {
+  local rel="$1" obj sub subdir
+  obj="${rel%%/*}"
+  [[ "$obj" == "$rel" ]] && return 1          # Datei ohne Objekt-Ordner -> nicht bauen
+  sub="${rel#*/}"; subdir="$(dirname "$sub")"
+  local d="$ROOT/$obj/Export"
+  [[ "$subdir" != "." ]] && d="$d/$subdir"
+  printf '%s' "$d"
+}
+
 needs_build() {
   local md="$1" docx="$2" pdf="$3"
   [[ $FORCE -eq 1 ]] && return 0
@@ -66,9 +76,9 @@ needs_build() {
   [[ $WANT_PDF  -eq 1 ]] && outs+=("$pdf")
   local out
   for out in "${outs[@]}"; do
-    [[ "$md"   -nt "$out" ]] && return 0   # Quelle neuer
-    [[ "$REF"  -nt "$out" ]] && return 0   # Design-Vorlage neuer
-    [[ "$SELF" -nt "$out" ]] && return 0   # Build-Skript neuer
+    [[ "$md"   -nt "$out" ]] && return 0
+    [[ "$REF"  -nt "$out" ]] && return 0
+    [[ "$SELF" -nt "$out" ]] && return 0
   done
   return 1
 }
@@ -77,7 +87,7 @@ build_one() {
   local md="$1"
   local abs; abs="$(cd "$(dirname "$md")" && pwd)/$(basename "$md")"
   local rel="${abs#"$ROOT"/}"
-  local outdir="$OUTROOT/$(dirname "$rel")"
+  local outdir; outdir="$(out_dir_for "$rel")" || { echo "übersprungen (kein Objekt): $rel" >&2; return 0; }
   local base; base="$(basename "$md" .md)"
   local docx="$outdir/$base.docx"
   local pdf="$outdir/$base.pdf"
@@ -93,11 +103,10 @@ build_one() {
   pandoc "$md" --reference-doc="$REF" --from markdown-smart -o "$docx"
 
   if [[ $WANT_PDF -eq 1 ]]; then
-    # PDF aus dem DOCX -> identisches Aussehen wie die DOCX
     "$SOFFICE" --headless --convert-to pdf --outdir "$outdir" "$docx" >/dev/null 2>&1
   fi
   [[ $WANT_DOCX -eq 0 ]] && rm -f "$docx"
-  echo "✓ gebaut:  $rel"; BUILT=$((BUILT+1))
+  echo "✓ gebaut:  $rel  ->  ${outdir#"$ROOT"/}/"; BUILT=$((BUILT+1))
 }
 
 BUILT=0; SKIPPED=0
@@ -105,4 +114,4 @@ while IFS= read -r md; do
   [[ -z "$md" ]] && continue
   build_one "$md"
 done < <(collect)
-echo "Fertig: $BUILT gebaut, $SKIPPED übersprungen -> $OUTROOT/"
+echo "Fertig: $BUILT gebaut, $SKIPPED übersprungen (Ausgaben in <Objekt>/Export/)"

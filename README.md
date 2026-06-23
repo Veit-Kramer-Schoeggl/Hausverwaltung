@@ -14,13 +14,16 @@ versionierbar, sieht aber gedruckt professionell aus.
 │   ├── Protokoll_Vorlage.md      Blanko-Blueprint für Versammlungsprotokolle
 │   └── werkzeuge/                Skripte zum Neu-Erzeugen der Schablone
 ├── build.sh                      Markdown → DOCX + PDF
-├── Export/                       erzeugte PDF/DOCX (nicht versioniert)
 ├── App/                          (Platzhalter für eine spätere Eigentümer-App)
 └── Objekt_Paracelsusgasse_2/     das Objekt
     ├── 2025/ 2026/ …             Versammlungen, Anlagen je Jahr
-    ├── Korrespondenz/            Schriftverkehr
+    ├── Fenstertausch_Seria/      Rechtssache Seria
+    ├── Export/                   erzeugte PDF/DOCX dieses Objekts (nicht versioniert)
     └── …
 ```
+
+> Jedes Objekt bekommt seinen **eigenen `Export/`-Ordner** (`<Objekt>/Export/…`),
+> damit bei mehreren Objekten nichts vermischt wird.
 
 ## Voraussetzungen
 
@@ -36,8 +39,9 @@ versionierbar, sieht aber gedruckt professionell aus.
 ./build.sh --pdf datei.md          # nur PDF   (--docx = nur DOCX)
 ```
 
-Ergebnisse landen unter `Export/<gleicher Pfad>/`. `Export/` wird bewusst **nicht**
-versioniert — die Dateien lassen sich jederzeit neu bauen.
+Ergebnisse landen pro Objekt unter `<Objekt>/Export/<gleicher Pfad>/`
+(z. B. `Objekt_Paracelsusgasse_2/Export/2026/…`). Die `Export/`-Ordner werden
+bewusst **nicht** versioniert — die Dateien lassen sich jederzeit neu bauen.
 
 ## Automatischer Build & Cloud
 

@@ -1,5 +1,6 @@
 # Generierte Ausgaben (jederzeit aus den .md neu baubar mit ./build.sh)
-/Export/
+# Pro Objekt:  <Objekt>/Export/   (an beliebiger Stelle im Baum)
+Export/
 
 # LibreOffice / Office Sperr- und Temp-Dateien
 .~lock.*#

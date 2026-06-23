@@ -72,15 +72,22 @@ jobs:
         if: ${{ env.KDRIVE_WEBDAV_URL != '' }}
         run: |
           set -euo pipefail
-          [ -d Export ] || { echo "Kein Export/ – nichts hochzuladen."; exit 0; }
+          shopt -s nullglob
+          exports=( */Export )
+          [ "${#exports[@]}" -gt 0 ] || { echo "Kein Export/ – nichts hochzuladen."; exit 0; }
           export RCLONE_CONFIG_KDRIVE_TYPE=webdav
           export RCLONE_CONFIG_KDRIVE_URL="$KDRIVE_WEBDAV_URL"
           export RCLONE_CONFIG_KDRIVE_VENDOR=other
           export RCLONE_CONFIG_KDRIVE_USER="$KDRIVE_USER"
           export RCLONE_CONFIG_KDRIVE_PASS="$(rclone obscure "$KDRIVE_PASS")"
-          DEST="${KDRIVE_DEST:-Hausverwaltung/Export}"
+          DEST="${KDRIVE_DEST:-Hausverwaltung}"
+          # je Objekt:  <Objekt>/Export  ->  kdrive:<DEST>/<Objekt>
           # 'copy' = nur neue/geänderte Dateien hochladen, nichts löschen
-          rclone copy Export "kdrive:$DEST" --create-empty-src-dirs --transfers 4 -v
+          for exp in "${exports[@]}"; do
+            obj="${exp%/Export}"
+            echo "→ Upload: $exp  ->  kdrive:$DEST/$obj"
+            rclone copy "$exp" "kdrive:$DEST/$obj" --create-empty-src-dirs --transfers 4 -v
+          done
 
       - name: Hinweis, falls Zugangsdaten fehlen
         if: ${{ env.KDRIVE_WEBDAV_URL == '' }}

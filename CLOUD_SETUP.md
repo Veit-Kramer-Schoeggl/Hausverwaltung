@@ -44,8 +44,9 @@ folgende drei Secrets anlegen:
 | `KDRIVE_USER` | deine Infomaniak-E-Mail |
 | `KDRIVE_PASS` | das Anwendungs-Passwort |
 
-Optional als **Variable** (Tab „Variables"): `KDRIVE_DEST` = Zielordner im
-kDrive (Standard: `Hausverwaltung/Export`).
+Optional als **Variable** (Tab „Variables"): `KDRIVE_DEST` = Basis-Zielordner im
+kDrive (Standard: `Hausverwaltung`). Darunter wird je Objekt ein Unterordner
+angelegt, z. B. `Hausverwaltung/Objekt_Paracelsusgasse_2/2026/…`.
 
 > Solange diese Secrets fehlen, baut der Workflow die PDFs trotzdem — er
 > überspringt nur den Upload (kein Fehler).
@@ -54,14 +55,15 @@ kDrive (Standard: `Hausverwaltung/Export`).
 
 - **Actions → „PDFs bauen & in die Cloud pushen" → Run workflow** (manuell),
   Option *rebuild_all* = true für einen ersten Komplettlauf.
-- Danach erscheinen die PDFs im kDrive unter `Hausverwaltung/Export/…`.
+- Danach erscheinen die PDFs im kDrive unter
+  `Hausverwaltung/<Objekt>/…`, z. B. `Hausverwaltung/Objekt_Paracelsusgasse_2/2026/…`.
 
 ### 5. Für Eigentümer freigeben
 
-Im kDrive-Web den Ordner `Hausverwaltung/Export` (oder einen Unterordner mit nur
-den freizugebenden Protokollen) per **Freigabe-Link** teilen — optional mit
-**Passwort** und **Ablaufdatum**. Diesen Link an die Eigentümer:innen schicken;
-sie brauchen kein eigenes Konto.
+Im kDrive-Web den Objekt-Ordner `Hausverwaltung/Objekt_Paracelsusgasse_2`
+(oder einen Unterordner mit nur den freizugebenden Protokollen) per
+**Freigabe-Link** teilen — optional mit **Passwort** und **Ablaufdatum**. Diesen
+Link an die Eigentümer:innen schicken; sie brauchen kein eigenes Konto.
 
 > Tipp: Lege im kDrive z. B. einen Ordner `Eigentümer/` an und teile nur diesen.
 > Sensible interne Dokumente (z. B. `Fenstertausch_Seria/`) dann **nicht**
@@ -75,8 +77,8 @@ sie brauchen kein eigenes Konto.
 rclone config create kdrive webdav \
   url="https://<kennung>.connect.kdrive.infomaniak.com/<kennung>" \
   vendor=other user="deine@email" pass="$(rclone obscure 'ANWENDUNGS_PASSWORT')"
-./build.sh                      # PDFs bauen (inkrementell)
-rclone copy Export kdrive:Hausverwaltung/Export -v
+./build.sh                      # PDFs bauen (inkrementell, pro Objekt)
+for exp in */Export; do rclone copy "$exp" "kdrive:Hausverwaltung/${exp%/Export}" -v; done
 ```
 
 ---
